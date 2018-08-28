@@ -1,4 +1,6 @@
-![image](http://cdn.bitcoin2.network/logos/b2n-logo-lg.png)
+<p align="center">
+<img width="600" height="120" src="http://cdn.bitcoin2.network/logos/b2n-logo-lg.png">
+</p>
 
 [![Build Status](https://travis-ci.org/bitcoin2-project/bitcoin2.svg?branch=master)](https://travis-ci.org/b2n-project/bitcoin2network)
 [![Build status](https://ci.appveyor.com/api/projects/status/eyuxu0c87gofex5d/branch/master?svg=true)](https://ci.appveyor.com/project/b2n-project/bitcoin2netowrk)
