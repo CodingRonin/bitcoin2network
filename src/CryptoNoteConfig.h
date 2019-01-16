@@ -77,9 +77,9 @@ namespace parameters {
 #define CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS       1
 #define CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_SECONDS      DIFFICULTY_TARGET * CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS
 
-#define CRYPTONOTE_MEMPOOL_TX_LIVETIME                  60 * 60 * 24
-#define CRYPTONOTE_MEMPOOL_TX_FROM_ALT_BLOCK_LIVETIME   CRYPTONOTE_MEMPOOL_TX_LIVETIME * 7
-#define CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL 2
+#define CRYPTONOTE_MEMPOOL_TX_LIVETIME                  60 * 60 * 24    // 1 day
+#define CRYPTONOTE_MEMPOOL_TX_FROM_ALT_BLOCK_LIVETIME   CRYPTONOTE_MEMPOOL_TX_LIVETIME * 2  // 2 days
+#define CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL 2   // 2 days
 
 
 #define FUSION_TX_MIN_INPUT_COUNT                       12
@@ -119,8 +119,8 @@ namespace parameters {
 #define BLOCK_MINOR_VERSION_0                           0
 #define BLOCK_MINOR_VERSION_1                           1
 
-#define BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT          20000
-#define BLOCKS_SYNCHRONIZING_DEFAULT_COUNT              4000
+#define BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT          10000   //by default, blocks ids count in synchronizing
+#define BLOCKS_SYNCHRONIZING_DEFAULT_COUNT              100    //by default, blocks count in blocks downloading
 #define COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT           1000
 
 #define P2P_DEFAULT_PORT                                19636
@@ -129,16 +129,16 @@ namespace parameters {
 #define P2P_LOCAL_WHITE_PEERLIST_LIMIT                  1000
 #define P2P_LOCAL_GRAY_PEERLIST_LIMIT                   5000
 
-#define P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE            64 * 1024 * 1024
+#define P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE            128 * 1024 * 1024   // 128 MB
 #define P2P_DEFAULT_CONNECTIONS_COUNT                   10
 #define P2P_DEFAULT_WHITELIST_CONNECTIONS_PERCENT       70
-#define P2P_DEFAULT_HANDSHAKE_INTERVAL                  60
-#define P2P_DEFAULT_PACKET_MAX_SIZE                     50000000
+#define P2P_DEFAULT_HANDSHAKE_INTERVAL                  60  // seconds
+#define P2P_DEFAULT_PACKET_MAX_SIZE                     50000000    // 50000000 bytes maximum packet size
 #define P2P_DEFAULT_PEERS_IN_HANDSHAKE                  250
-#define P2P_DEFAULT_CONNECTION_TIMEOUT                  5000
-#define P2P_DEFAULT_PING_CONNECTION_TIMEOUT             2000
-#define P2P_DEFAULT_INVOKE_TIMEOUT                      60 * 2 * 1000
-#define P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT            5000
+#define P2P_DEFAULT_CONNECTION_TIMEOUT                  7000    // 7 seconds
+#define P2P_DEFAULT_PING_CONNECTION_TIMEOUT             3000    // 3 seconds
+#define P2P_DEFAULT_INVOKE_TIMEOUT                      60 * 2 * 1000   // 2 minutes
+#define P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT            7000    // 7 seconds
 
 
 const std::initializer_list<const char*> SEED_NODES {
@@ -189,7 +189,11 @@ const std::initializer_list<CheckpointData> CHECKPOINTS {
     { 30803,"1c6b62afaff3acecabb12bc7babac9708a5e5676c726a0bd0e030e9911e2753b" },
     { 33833,"c0a68bb337d84f528e81ca42244dfeb893fdf9c0ceae042951d975c62ad29e45" },
     { 35853,"732df381a5afff75535d6e35a7281e445d9bb61db231b5b49af32e32303334e6" },
-
+    { 50805,"9744eceadf5f7f23b5ee3f19e9ccf74a252e6c0015bcd8a123cc07e849d3a98f" },
+    {108801,"6637b108a8cbd47bcbf135db5a527a15e32013e4c11c517bd67708dfae3b5c1e" },
+    {155551,"cd952093d7dbba38fa2298aa960396e312cd911313cf35c457c559f1dcdebe31" },
+    {190091,"839f2bb5cba75c819d21531a9587bf9beed0295ec85d9aff8a863636ba11eaac" },
+    {208802,"cfa840115e922cc8902d20f7e3a9871d3aa53f4614955194e3beaf20b94587b6" },
 
 };
 
