@@ -831,7 +831,7 @@ CurrencyBuilder::CurrencyBuilder(Logging::ILogger& log) : m_currency(log) {
   numberOfPeriodsToForgetTxDeletedFromPool(CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL);
 
   // fusion transactions fix
-  fusionTxMaxSize(MAX_TRANSACTION_SIZE_LIMIT);
+  fusionTxMaxSize(MAX_TRANSACTION_SIZE_LIMIT / 3);
   fusionTxMinInputCount(FUSION_TX_MIN_INPUT_COUNT);
   fusionTxMinInOutCountRatio(FUSION_TX_MIN_IN_OUT_COUNT_RATIO);
 
