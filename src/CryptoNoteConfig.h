@@ -123,8 +123,8 @@ namespace parameters {
 #define BLOCKS_SYNCHRONIZING_DEFAULT_COUNT              100    //by default, blocks count in blocks downloading
 #define COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT           1000
 
-#define P2P_DEFAULT_PORT                                19636
-#define RPC_DEFAULT_PORT                                19635
+#define P2P_DEFAULT_PORT                                19936
+#define RPC_DEFAULT_PORT                                19935
 
 #define P2P_LOCAL_WHITE_PEERLIST_LIMIT                  1000
 #define P2P_LOCAL_GRAY_PEERLIST_LIMIT                   5000
