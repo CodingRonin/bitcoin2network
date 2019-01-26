@@ -41,7 +41,7 @@ namespace parameters {
 #define GENESIS_BLOCK_REWARD                            1057000000
 
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
-#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       100000
+#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       200000
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2    90000
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1    80000
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE
@@ -52,7 +52,7 @@ namespace parameters {
 #define DEFAULT_FEE                                     (uint64_t)pow(10, CRYPTONOTE_MONEY_DECIMAL_POINT - 1)
 #define DEFAULT_DUST_THRESHOLD                          (uint64_t)pow(10, CRYPTONOTE_MONEY_DECIMAL_POINT / 4)
 
-#define MAX_TRANSACTION_SIZE_LIMIT                      256000 
+#define MAX_TRANSACTION_SIZE_LIMIT                      200000 
 #define MEMPOOL_POLLING_INTERVAL                        60 // how often to clean mempool
 
 #define DIFFICULTY_TARGET                               90
@@ -70,7 +70,7 @@ namespace parameters {
 #define DIFFICULTY_LAG_V2                               DIFFICULTY_LAG
 
 #define B2N                                             0x60000
-#define MAX_BLOCK_SIZE_INITIAL                          100 * 1024
+#define MAX_BLOCK_SIZE_INITIAL                          256 * 1024
 #define MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR           100 * 1024
 #define MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR         365 * 24 * 60 * 60 / DIFFICULTY_TARGET
 
@@ -120,7 +120,7 @@ namespace parameters {
 #define BLOCK_MINOR_VERSION_1                           1
 
 #define BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT          10000   //by default, blocks ids count in synchronizing
-#define BLOCKS_SYNCHRONIZING_DEFAULT_COUNT              100    //by default, blocks count in blocks downloading
+#define BLOCKS_SYNCHRONIZING_DEFAULT_COUNT              2000    //by default, blocks count in blocks downloading
 #define COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT           1000
 
 #define P2P_DEFAULT_PORT                                19936
@@ -129,29 +129,29 @@ namespace parameters {
 #define P2P_LOCAL_WHITE_PEERLIST_LIMIT                  1000
 #define P2P_LOCAL_GRAY_PEERLIST_LIMIT                   5000
 
-#define P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE            128 * 1024 * 1024   // 128 MB
+#define P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE            64 * 1024 * 1024   // 64 MB
 #define P2P_DEFAULT_CONNECTIONS_COUNT                   10
 #define P2P_DEFAULT_WHITELIST_CONNECTIONS_PERCENT       70
 #define P2P_DEFAULT_HANDSHAKE_INTERVAL                  60  // seconds
 #define P2P_DEFAULT_PACKET_MAX_SIZE                     50000000    // 50000000 bytes maximum packet size
 #define P2P_DEFAULT_PEERS_IN_HANDSHAKE                  250
-#define P2P_DEFAULT_CONNECTION_TIMEOUT                  7000    // 7 seconds
-#define P2P_DEFAULT_PING_CONNECTION_TIMEOUT             3000    // 3 seconds
+#define P2P_DEFAULT_CONNECTION_TIMEOUT                  5000    // 7 seconds
+#define P2P_DEFAULT_PING_CONNECTION_TIMEOUT             5000    // 3 seconds
 #define P2P_DEFAULT_INVOKE_TIMEOUT                      60 * 2 * 1000   // 2 minutes
-#define P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT            7000    // 7 seconds
+#define P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT            5000    // 7 seconds
 
 
 const std::initializer_list<const char*> SEED_NODES {
 
-    "node1.bitcoin2.network:19636",
-    "node2.bitcoin2.network:19636",
-    "node3.bitcoin2.network:19636",
-    "node4.bitcoin2.network:19636",
-    "node5.bitcoin2.network:19636",
-    "node6.bitcoin2.network:19636",
-    "node7.bitcoin2.network:19636",
-    "node8.bitcoin2.network:19636",
-    "node9.bitcoin2.network:19636",
+    "node1.bitcoin2.network:19936",
+    "node2.bitcoin2.network:19936",
+    "node3.bitcoin2.network:19936",
+    "node4.bitcoin2.network:19936",
+    "node5.bitcoin2.network:19936",
+    "node6.bitcoin2.network:19936",
+    "node7.bitcoin2.network:19936",
+    "node8.bitcoin2.network:19936",
+    "node9.bitcoin2.network:19936",
 
 };
 
