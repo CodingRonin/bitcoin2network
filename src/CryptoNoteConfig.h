@@ -41,7 +41,7 @@ namespace parameters {
 #define GENESIS_BLOCK_REWARD                            1057000000
 
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
-#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       100000
+#define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       100000 //size of block (bytes) after which reward for block calculated using block size
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2    90000
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1    80000
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE
@@ -52,7 +52,7 @@ namespace parameters {
 #define DEFAULT_FEE                                     (uint64_t)pow(10, CRYPTONOTE_MONEY_DECIMAL_POINT - 1)
 #define DEFAULT_DUST_THRESHOLD                          (uint64_t)pow(10, CRYPTONOTE_MONEY_DECIMAL_POINT / 4)
 
-#define MAX_TRANSACTION_SIZE_LIMIT                      200000 
+#define MAX_TRANSACTION_SIZE_LIMIT                      120000 
 #define MEMPOOL_POLLING_INTERVAL                        60 // how often to clean mempool
 
 #define DIFFICULTY_TARGET                               90
@@ -70,7 +70,7 @@ namespace parameters {
 #define DIFFICULTY_LAG_V2                               DIFFICULTY_LAG
 
 #define B2N                                             0x60000
-#define MAX_BLOCK_SIZE_INITIAL                          256 * 1024
+#define MAX_BLOCK_SIZE_INITIAL                          100 * 1024
 #define MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR           100 * 1024
 #define MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR         365 * 24 * 60 * 60 / DIFFICULTY_TARGET
 
@@ -78,8 +78,8 @@ namespace parameters {
 #define CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_SECONDS      DIFFICULTY_TARGET * CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS
 
 #define CRYPTONOTE_MEMPOOL_TX_LIVETIME                  60 * 60 * 24    // 1 day
-#define CRYPTONOTE_MEMPOOL_TX_FROM_ALT_BLOCK_LIVETIME   CRYPTONOTE_MEMPOOL_TX_LIVETIME * 2  // 2 days
-#define CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL 2   // 2 days
+#define CRYPTONOTE_MEMPOOL_TX_FROM_ALT_BLOCK_LIVETIME   CRYPTONOTE_MEMPOOL_TX_LIVETIME * 3  // 3 days
+#define CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL 3   // 3 days
 
 
 #define FUSION_TX_MIN_INPUT_COUNT                       12
@@ -103,7 +103,7 @@ namespace parameters {
 
 } // parameters
 
-#define CRYPTONOTE_NAME                                 "b2n"
+#define CRYPTONOTE_NAME                                 "bitcoin2network"
 #define CRYPTONOTE_GENESIS_TX                           "013c01ff0001c09482f803021c35e6e76586e05bccd0b48112ec0065a5f834c6c76131b17ab2d308df934a6a210130090e9cbf0f61dfd583db08ec93545e66533aed04817fd4148d2e5a1abf39b4"
 
 
@@ -135,10 +135,10 @@ namespace parameters {
 #define P2P_DEFAULT_HANDSHAKE_INTERVAL                  60  // seconds
 #define P2P_DEFAULT_PACKET_MAX_SIZE                     50000000    // 50000000 bytes maximum packet size
 #define P2P_DEFAULT_PEERS_IN_HANDSHAKE                  250
-#define P2P_DEFAULT_CONNECTION_TIMEOUT                  5000    // 7 seconds
-#define P2P_DEFAULT_PING_CONNECTION_TIMEOUT             5000    // 3 seconds
+#define P2P_DEFAULT_CONNECTION_TIMEOUT                  5000    // 5 seconds
+#define P2P_DEFAULT_PING_CONNECTION_TIMEOUT             2000    // 2 seconds
 #define P2P_DEFAULT_INVOKE_TIMEOUT                      60 * 2 * 1000   // 2 minutes
-#define P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT            5000    // 7 seconds
+#define P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT            5000    // 5 seconds
 
 
 const std::initializer_list<const char*> SEED_NODES {
@@ -194,6 +194,7 @@ const std::initializer_list<CheckpointData> CHECKPOINTS {
     {155551,"cd952093d7dbba38fa2298aa960396e312cd911313cf35c457c559f1dcdebe31" },
     {190091,"839f2bb5cba75c819d21531a9587bf9beed0295ec85d9aff8a863636ba11eaac" },
     {208802,"cfa840115e922cc8902d20f7e3a9871d3aa53f4614955194e3beaf20b94587b6" },
+    {234395,"76c204f0af1ceb0effb6c8f3c99fb813764e3d6521c46a2ad9b6f145d74023b4" },
 
 };
 
