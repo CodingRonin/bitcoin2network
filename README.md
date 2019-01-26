@@ -88,8 +88,8 @@ bitcoin2network is a brain-child ambitious project of a tech-savvy team that pos
 * **Maturity of mined coins:**    _60 blocks_
 * **Difficulty Re-target:**    _each block_ (approx. 90 seconds)
 * **Address letter:**    _btc2_
-* **P2P Port:**    _19636_
-* **RPC Port:**    _19635_
+* **P2P Port:**    _19936_
+* **RPC Port:**    _19935_
 
 
 ## B2N Coin Allocation:	
